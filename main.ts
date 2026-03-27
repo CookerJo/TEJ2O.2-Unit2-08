@@ -2,7 +2,7 @@
  *
  * Created by: Josiah
  * Created on: March 2026
- * This program will do cookie clicker
+ * This program will changed the color of the LED to what the color desplay on the microbit
 */
 
 // setup
