@@ -13,64 +13,78 @@ pins.digitalWritePin(DigitalPin.P13, 0) // blue
 pins.digitalWritePin(DigitalPin.P14, 0) // green
 pins.digitalWritePin(DigitalPin.P15, 0) // red
 
-// program
-input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.Yes)
-    pause(1000)
+// clean up
+basic.clearScreen()
+basic.showIcon(IconNames.Happy)
+pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
+pins.digitalWritePin(DigitalPin.P15, 0)
+
+// input
+input.onButtonPressed(Button.A, function() {
+
+    // red
     basic.clearScreen()
-
-    // show red
-    pins.digitalWritePin(DigitalPin.P15, 1)
-    basic.showString("Red")
-    pause(1000)
-    pins.digitalWritePin(DigitalPin.P15, 0)
-
-    // show green
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.showString("Green")
-    pause(1000)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-
-    // show blue
+    basic.showString('Red')
     pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.showString("Blue")
-    pause(1000)
+    basic.pause(1000)
     pins.digitalWritePin(DigitalPin.P13, 0)
 
-    // show magenta
-    pins.digitalWritePin(DigitalPin.P15, 1)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.showString("Magenta")
-    pause(1000)
-    pins.digitalWritePin(DigitalPin.P15, 0)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-    // show cyan
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.showString("Cyan")
-    pause(1000)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-
-    // show yellow
-    pins.digitalWritePin(DigitalPin.P15, 1)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    basic.showString("Yellow")
-    pause(1000)
-    pins.digitalWritePin(DigitalPin.P15, 0)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-
-    // show white
-    pins.digitalWritePin(DigitalPin.P15, 1)
-    pins.digitalWritePin(DigitalPin.P14, 1)
-    pins.digitalWritePin(DigitalPin.P13, 1)
-    basic.showString("White")
-    pause(1000)
-    pins.digitalWritePin(DigitalPin.P15, 0)
-    pins.digitalWritePin(DigitalPin.P14, 0)
-    pins.digitalWritePin(DigitalPin.P13, 0)
-
-    //reset
+    // green
     basic.clearScreen()
+    basic.showString('Green')
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    
+    // blue
+    basic.clearScreen()
+    basic.showString('Blue')
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P15, 0)
+    
+    // majenta
+    basic.clearScreen()
+    basic.showString('Majent')
+    pins.digitalWritePin(DigitalPin.P13, 1)
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P13, 0)
+    pins.digitalWritePin(DigitalPin.P15, 0)
+    
+    // cyan
+    basic.clearScreen()
+    basic.showString('Cyan')
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    pins.digitalWritePin(DigitalPin.P15, 0)
+
+    // yellow
+    basic.clearScreen()
+    basic.showString('Yellow')
+    pins.digitalWritePin(DigitalPin.P13, 1)
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    basic.pause(1000)
+    pins.digitalWritePin(DigitalPin.P13, 0)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+
+    // white
+    basic.clearScreen()
+    basic.showString('White')
+    pins.digitalWritePin(DigitalPin.P13, 1)
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.pause(1000)
+
+    // black
+    pins.digitalWritePin(DigitalPin.P13, 0)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    pins.digitalWritePin(DigitalPin.P15, 0)
+    basic.clearScreen()
+    
+    // come back to start
     basic.showIcon(IconNames.Happy)
 })
